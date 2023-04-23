@@ -1,0 +1,280 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+nav {
+    border-bottom: 0.1rem solid #1e293b;
+       position: fixed;
+       top: 0;
+       background-color: rgb(21, 3, 186);
+       width: 100%;
+   }
+   .logo{
+       width: 12rem;
+       height: 3.5rem;
+       box-sizing: border-box;
+       display: block;
+       text-align: center;
+   } 
+   .productos {
+       border-top: 0.1rem solid #000;
+       padding: 0.313rem;
+   }
+   .items {
+       display: inline;
+       margin: 0.625rem;
+       text-align: center;
+   }
+   .items i {
+       display: inline;
+       margin: 1.25rem;
+       color: #fff;
+   }
+   .items a {
+       display: inline;
+       margin: 0.313rem;
+       width: 1.25rem;
+       font-size: 1rem;
+       color: #fff;
+       text-decoration: none;
+   }
+
+   nav {
+    background-color: rgb(21, 3, 186);;
+    height: 90px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+    display: block;
+
+}
+
+
+nav ul{
+    float: right;
+    margin-right: 10px;
+
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    margin-top: 60%;
+
+}
+nav ul li a{
+    color: #fff;
+    font-size: 10px;
+    padding: 7px 7px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a.active, li a:hover {
+background-color: #000090;
+transition: .5s;
+}
+
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px ;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+footer h4  {
+    text-align: center;
+    background-color: #1e293b;
+    color: #fff;
+    padding: .2rem .3rem;
+    margin-bottom: 0;
+}
+   .emergente {
+    display: grid;
+    border: solid 0.1rem #000;
+    margin-top: 8rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 60%;
+    height: 60%;
+    margin-left:  20rem;
+    grid-template-columns: repeat(2, 27rem);
+    grid-template-rows: repeat(2, 27rem) ;
+
+}
+.item {
+  
+    
+    height: 60%;
+    width: 60%;
+    align-items: center;
+    
+}
+
+
+
+.item img {
+    height: 20rem;
+    width: 20rem;
+}
+
+.item :first-child {
+    grid-row-start: auto;
+}
+
+
+.item :nth-child(2) p {
+    font-size: 3rem;
+}
+
+
+
+
+@media  (max-width: 1650px  ) and (min-width: 1450px)   {
+    .items a {
+        font-size: .7rem;
+    }
+
+
+}
+@media  (max-width: 1450px  ) and (min-width: 1320px)   {
+    .items a {
+        font-size: .7rem;
+        margin: 0;
+    }
+    .emergente :nth-child(2) p {
+        font-size: .8rem;
+    }
+
+    .item {
+  
+    
+        height: 50%;
+        width: 80%;
+        align-items: left;
+        
+    }
+    .item img {
+        height: 20rem;
+        width: 20rem;
+    }
+    .emergente {
+    grid-template-columns: repeat(2, 23rem);
+    grid-template-rows: repeat(2, 25rem) ;
+    width: 50%;
+    height: 50%;
+}
+}
+@media  (max-width: 1320px  ) and (min-width: 900px)   {
+    .items a {
+        font-size: .6rem;
+        margin: 0;
+    }
+
+    .item {
+  
+    
+        height: 50%;
+        width: 80%;
+        align-items: left;
+        
+    }
+    
+    .item img {
+        height: 20rem;
+        width: 20rem;
+    }
+    .emergente {
+    grid-template-columns: repeat(2, 17rem);
+    grid-template-rows: repeat(2, 15rem) ;
+    margin-left: 15rem;
+}
+
+.emergente :nth-child(2) p {
+    font-size: .7rem;
+}
+
+
+}
+
+@media (max-width: 899px)  {
+    .checkbtn {
+        display: block;
+        margin: .2rem;
+    }
+    .emergente{
+        margin-left: 3rem;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 5rem;
+        left: -100%;
+        text-align: center;
+        transition: all .5s; 
+        display: grid;
+        grid-template-columns: repeat(3, 7.625rem);
+       grid-template-rows: repeat(3, 7.625rem) ;
+       grid-auto-flow: dense;
+       justify-content: center;
+       
+    }
+    nav ul li {
+        margin: 7px 0;
+        line-height: 1.5rem;
+        
+    }
+    .emergente :nth-child(2) p {
+        font-size: .5rem;
+    }
+    nav ul li a{ 
+        font-size: 5px;
+        margin: 2px;
+    }
+    li a:hover, li a.active{ 
+        background-color: none;
+        color: red;
+    }
+    #check:checked ~ ul { 
+        left: 0;
+    }
+    .item {
+  
+    
+        height: 50%;
+        width: 80%;
+        align-items: left;
+        
+    }
+    .item img {
+        height: 12rem;
+        width: 12rem;
+    }
+    .emergente {
+    grid-template-columns: 16rem;
+    grid-template-rows: 18rem ;
+    margin-left: 6rem;
+}
+.emergente :nth-child(2) p {
+    font-size: .55rem;
+    text-align: left;margin: 0;
+}
+
+}
